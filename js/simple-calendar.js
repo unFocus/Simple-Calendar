@@ -1,17 +1,10 @@
 jQuery(document).ready(function($) {
-	var bullshit = $( "#datepicker" ).datepicker({
-			defaultDate: "+1w",
-			changeMonth: true,
-			numberOfMonths: 3,
-	   onSelect: function( selectedDate ) {
-				window.console.log('wtf');
-				var option = this.id == "from" ? "minDate" : "maxDate",
-					instance = $( this ).data( "datepicker" ),
-					date = $.datepicker.parseDate(
-						instance.settings.dateFormat ||
-						$.datepicker._defaults.dateFormat,
-						selectedDate, instance.settings );
-				dates.not( this ).datepicker( "option", option, date );
-			}
-	});
+	var i = document.createElement( "input" );
+	i.setAttribute( "type", "date" );
+	if ( i.type == "text" ) {
+		$( ".simple-datepicker" ).datepicker({
+			//beforeShow: function( input, inst ) { console.log('wtf'); },
+			//onClose: function( dateText, inst ) { console.log('wtf'); },
+		});
+	}
 });

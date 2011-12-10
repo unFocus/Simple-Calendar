@@ -120,9 +120,10 @@ class Simple_Calendar
 	}
 	static function admin_meta_box( $post ) {
 		?>
-			<div class="smoothness" style="position: relative">
+			<div>
 				<p>Hello</p>
-				<input type="date" id="datepicker" />
+				<input class="simple-datepicker" type="date" />
+				<input class="" type="time" />
 			</div>
 		<?php
 	}
